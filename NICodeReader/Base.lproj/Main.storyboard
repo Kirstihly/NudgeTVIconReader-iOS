@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,50 +13,62 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="NICodeViewController" customModule="NudgeTVIconReader" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Nudge TV" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gTu-vV-sCL">
-                                <rect key="frame" x="53" y="179" width="268" height="65"/>
-                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="50"/>
-                                <color key="textColor" red="0.074509803921568626" green="0.29803921568627451" blue="0.35686274509803922" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i2c-aZ-o7l">
-                                <rect key="frame" x="112" y="339" width="150" height="150"/>
+                            <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="132" placeholderIntrinsicHeight="26" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i2c-aZ-o7l">
+                                <rect key="frame" x="141" y="355" width="132" height="26"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="26" id="c7c-Th-Zko"/>
+                                    <constraint firstAttribute="width" constant="132" id="ilp-9J-diC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="12"/>
                                 <color key="tintColor" red="0.074509803920000006" green="0.29803921570000003" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" image="focus"/>
+                                <state key="normal" title="SCAN NUDGE TV ICON">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                                </state>
                                 <connections>
                                     <segue destination="B0K-bi-dGX" kind="presentation" id="UT3-hf-w8E"/>
                                 </connections>
                             </button>
+                            <imageView autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="190" placeholderIntrinsicHeight="190" insetsLayoutMarginsFromSafeArea="NO" image="r19g76b91_Chathing otf (100)" translatesAutoresizingMaskIntoConstraints="NO" id="qil-aM-fYs" userLabel="logo">
+                                <rect key="frame" x="112" y="165" width="190" height="190"/>
+                                <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="1"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="190" id="Itd-QO-YCQ"/>
+                                    <constraint firstAttribute="width" constant="190" id="oKb-jE-oE3"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="i2c-aZ-o7l" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="45F-Jb-Ypr"/>
-                            <constraint firstItem="i2c-aZ-o7l" firstAttribute="centerX" secondItem="5me-Ol-4qJ" secondAttribute="centerX" id="9gq-Qq-yWl"/>
-                            <constraint firstItem="gTu-vV-sCL" firstAttribute="top" secondItem="5me-Ol-4qJ" secondAttribute="top" constant="14" id="Kbm-oQ-BFb"/>
-                            <constraint firstItem="gTu-vV-sCL" firstAttribute="centerX" secondItem="5me-Ol-4qJ" secondAttribute="centerX" id="c9Z-Rj-xhG"/>
+                            <constraint firstItem="i2c-aZ-o7l" firstAttribute="centerX" secondItem="5me-Ol-4qJ" secondAttribute="centerX" id="0EC-pU-wCu"/>
+                            <constraint firstItem="qil-aM-fYs" firstAttribute="bottom" secondItem="i2c-aZ-o7l" secondAttribute="top" id="2aQ-Vi-A76"/>
+                            <constraint firstItem="i2c-aZ-o7l" firstAttribute="centerY" secondItem="5me-Ol-4qJ" secondAttribute="centerY" id="Fsc-NX-Gy4"/>
+                            <constraint firstItem="qil-aM-fYs" firstAttribute="centerX" secondItem="5me-Ol-4qJ" secondAttribute="centerX" id="sk8-jK-JAt"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="5me-Ol-4qJ"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="669.375" y="133.09859154929578"/>
         </scene>
         <!--Scanner Controller-->
         <scene sceneID="6su-PY-OE1">
             <objects>
                 <viewController id="B0K-bi-dGX" customClass="NIScannerController" customModule="NudgeTVIconReader" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xpT-9d-mEX">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qba-q7-QE8">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zmi-Qa-jYL">
-                                        <rect key="frame" x="165.5" y="38" width="44" height="24"/>
+                                        <rect key="frame" x="185" y="38" width="44" height="24"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -87,7 +97,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Nudge TV Icon is detected." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AAl-zJ-uU4">
-                                <rect key="frame" x="0.0" y="627" width="375" height="40"/>
+                                <rect key="frame" x="0.0" y="676" width="414" height="40"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="oxm-IU-7Qk"/>
@@ -121,6 +131,6 @@
     </scenes>
     <resources>
         <image name="cross" width="40" height="40"/>
-        <image name="focus" width="150" height="150"/>
+        <image name="r19g76b91_Chathing otf (100)" width="500" height="500"/>
     </resources>
 </document>

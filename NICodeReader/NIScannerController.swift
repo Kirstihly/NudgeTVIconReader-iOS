@@ -11,6 +11,7 @@ class NIScannerController: UIViewController {
 
     var captureSession = AVCaptureSession()
     var videoPreviewLayer: AVCaptureVideoPreviewLayer?
+    var qrCodeFrameView: UIView?
     
     @IBOutlet var messageLabel:UILabel!
     @IBOutlet var topbar: UIView!
@@ -40,8 +41,11 @@ class NIScannerController: UIViewController {
             // Set delegate and use the default dispatch queue to execute the call back
             captureMetadataOutput.setMetadataObjectsDelegate(self, queue: DispatchQueue.main)
             
-            // Input recognition algorithms here
-            
+            //**********
+            //Need Change!
+            //QR->NI
+            //**********
+            captureMetadataOutput.metadataObjectTypes = [AVMetadataObject.ObjectType.qr]
         } catch {
             // If any error occurs, simply print it out and don't continue any more.
             print(error)
@@ -60,19 +64,55 @@ class NIScannerController: UIViewController {
         view.bringSubview(toFront: messageLabel)
         view.bringSubview(toFront: topbar)
         
-        // Show recognition frame here
+        // Initialize QR Code Frame to highlight the QR code
+        qrCodeFrameView = UIView()
+        
+        if let qrCodeFrameView = qrCodeFrameView {
+            qrCodeFrameView.layer.borderColor = UIColor.green.cgColor
+            qrCodeFrameView.layer.borderWidth = 2
+            view.addSubview(qrCodeFrameView)
+            view.bringSubview(toFront: qrCodeFrameView)
+        }
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
+    
+
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+    }
+    */
+    
 }
 
 extension NIScannerController: AVCaptureMetadataOutputObjectsDelegate {
     func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
         // Check if the metadataObjects array is not nil and it contains at least one object.
         if metadataObjects.count == 0 {
-            // Input recognition algorithms here
-            messageLabel.text = "No icon is detected"
+            qrCodeFrameView?.frame = CGRect.zero
+            messageLabel.text = "No QR code is detected"
             return
         }
+        
+        // Get the metadata object.
+        let metadataObj = metadataObjects[0] as! AVMetadataMachineReadableCodeObject
+        
+        if metadataObj.type == AVMetadataObject.ObjectType.qr {
+            // If the found metadata is equal to the QR code metadata then update the status label's text and set the bounds
+            let barCodeObject = videoPreviewLayer?.transformedMetadataObject(for: metadataObj)
+            qrCodeFrameView?.frame = barCodeObject!.bounds
+            
+            if metadataObj.stringValue != nil {
+                messageLabel.text = metadataObj.stringValue
+            }
+        }
+    }
+}
