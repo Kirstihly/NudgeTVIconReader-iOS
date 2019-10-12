@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		67D641A023518FF600445C0F /* r19g76b91_Chathing otf (100).png in Resources */ = {isa = PBXBuildFile; fileRef = 67D6419F23518FF600445C0F /* r19g76b91_Chathing otf (100).png */; };
 		F4F09DB71DAF669400026BB2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F09DB61DAF669400026BB2 /* AppDelegate.swift */; };
 		F4F09DBC1DAF669400026BB2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4F09DBA1DAF669400026BB2 /* Main.storyboard */; };
 		F4F09DBE1DAF669400026BB2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4F09DBD1DAF669400026BB2 /* Assets.xcassets */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		67D6419F23518FF600445C0F /* r19g76b91_Chathing otf (100).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "r19g76b91_Chathing otf (100).png"; sourceTree = "<group>"; };
 		F4F09DB31DAF669400026BB2 /* NudgeTVIconReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NudgeTVIconReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4F09DB61DAF669400026BB2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4F09DBB1DAF669400026BB2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 				F4F09DBD1DAF669400026BB2 /* Assets.xcassets */,
 				F4F09DBF1DAF669400026BB2 /* LaunchScreen.storyboard */,
 				F4F09DC21DAF669400026BB2 /* Info.plist */,
+				67D6419F23518FF600445C0F /* r19g76b91_Chathing otf (100).png */,
 				F4F09DC81DAF6A3800026BB2 /* NICodeViewController.swift */,
 				F4F09DCA1DAF6A4F00026BB2 /* NIScannerController.swift */,
 			);
@@ -130,6 +133,7 @@
 			files = (
 				F4F09DC11DAF669400026BB2 /* LaunchScreen.storyboard in Resources */,
 				F4F09DBE1DAF669400026BB2 /* Assets.xcassets in Resources */,
+				67D641A023518FF600445C0F /* r19g76b91_Chathing otf (100).png in Resources */,
 				F4F09DBC1DAF669400026BB2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
